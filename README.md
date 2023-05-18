@@ -1,5 +1,6 @@
 # Create a Minecraft server on Oracle Free Tier
-Create a free Minecraft server on an Oracle free tier on Ubuntu 22.04 with a 2 OCPU and 12 gb ram Ampere virtual machine.
+Instructions to create a free Minecraft server on an Oracle free tier on Ubuntu 22.04 with a 2 OCPU and 12 gb ram Ampere virtual machine.
+This guide assumes you have already created a free account in Oracle, and have the knowledge/ability to connect to a server via SSH.
 
 ## Create a new instance
 
