@@ -1,6 +1,7 @@
 # Create a Minecraft server on Oracle Free Tier
 Instructions to create a free Minecraft server on an Oracle free tier on Ubuntu 22.04 with a 2 OCPU and 12 gb ram Ampere virtual machine.
 This guide assumes you have already created a free account in Oracle, and have the knowledge/ability to connect to a server via SSH.
+This guide also provides steps to connect an Xbox Series Console (and Nintendo Switch) to the custom server.
 
 ## Create a new instance
 
@@ -100,7 +101,41 @@ The actual Bedrock server itself is running on Ubuntu in the background using 's
 
 #### Add yourself as an operator
 
-Once inside the server screen, you can add your gamertag as an operator via `op [gamertag]`. It appears you have to actually be connected to the server from your game to do so. 
+Once inside the server screen, you can add your gamertag as an operator via `op [gamertag]`. It appears you have to actually be connected to the server from your game to do so. Note the `xuid` in case this doesn't work.
+
+If it didn't work, detach the screen with ctrl+a, d. Then,`cd` to the servername folder and find permissions.json. 
+`nano permissions.json` to edit it, and add:
+
+```
+[
+{
+"permission": "operator",
+"xuid": "[your gamertag's XUID from above]"
+}
+]
+
+```
+
+You can also add other levels via:
+
+```
+[
+{
+"permission": "operator",
+"xuid": "[your xuid]"
+},
+{
+"permission": "member",
+"xuid": "[your friend's xuid]"
+},
+{
+"permission": "visitor",
+"xuid": "[someone else's xuid]"
+}
+]
+
+```
+Again, all these xuid's can be found by attaching the server screen via `screen -r [servername]` and connecting a user to the server. 
 
 ## Accessing the server (in the game)
 
@@ -124,6 +159,6 @@ Xbox usually only presents the featured servers, and no option to manually add y
 - Connect and enjoy!
 - To connect again later, once again select any featured server and hit play, now your server will show up in the new add/select server menu. 
 - Note: This menu appears to persist after re-enabling Pi-Hole; however, I've kept the manual DNS settings on the Xbox for now.
--
+
 
 
