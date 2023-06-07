@@ -1,7 +1,17 @@
 # Create a Minecraft server on Oracle Free Tier
-Instructions to create a free Minecraft server on an Oracle free tier on Ubuntu 22.04 with a 2 OCPU and 12 gb ram Ampere virtual machine.
+
+These are instructions to create a free Minecraft Bedrock server on an Oracle free tier on Ubuntu 22.04 with a 4 OCPU and 24 gb ram Ampere virtual machine.
+
 This guide assumes you have already created a free account in Oracle, and have the knowledge/ability to connect to a server via SSH.
-This guide also provides steps to connect an Xbox Series Console (and Nintendo Switch) to the custom server.
+
+This guide also provides steps to connect an Xbox Series Console (and Nintendo Switch) to the custom server. As well, I've added intructions to optionally install [Crafty](https://craftycontrol.com) a neat free server dashboard. If Crafty appeals to you, it would likely be easier to install that first and create your server within Crafty. Or, you can add it after as I did.
+
+1. [Setup the server](#Getting_started)
+2. [Connect to the server on Xbox](Connect_Xbox_to_server.md)
+3. [Other Oracle settings: increase storage, reserve static IP, add cloudflare](Oracle_additional_settings.md)
+4. [Optional: Install Crafty](Install_Crafty.md)
+
+# Getting started
 
 ## Create a new instance
 
@@ -140,25 +150,6 @@ Again, all these xuid's can be found by attaching the server screen via `screen 
 ## Accessing the server (in the game)
 
 Go to multiplayer, add server, and use the Ubuntu server's public IPv4 address. 
-
-# Connect to your server on Xbox
-
-Xbox usually only presents the featured servers, and no option to manually add your own. However, there is a workaround for this.
-
-## Change the Xbox DNS settings
-- Go to your network settings on the xbox, and advanced settings. Select DNS, and change from automatic to manual. 
-- Set the primary DNS as: `104.238.130.180`, and the secondary as: `1.1.1.1`.
-- Quit Minecraft if it was open, restart the console
-- Note: if you use Pi-Hole you may have to temporarily disable it
-
-## Launch a server, and add your own
-- Launch Minecraft, play, servers. Pick any featured server and hit play. N
-- Now, rather than automatically connecting to the featured server, a new menu should pop up that will allow you to add/select your own.
-- Add your own server using the Public IPv4 address from your virtual machine above. Use the Port: `19132`. 
-- Make sure to toggle on the option to save this sever in your list, and give it a cool name.
-- Connect and enjoy!
-- To connect again later, once again select any featured server and hit play, now your server will show up in the new add/select server menu. 
-- Note: This menu appears to persist after re-enabling Pi-Hole; however, I've kept the manual DNS settings on the Xbox for now.
 
 
 
