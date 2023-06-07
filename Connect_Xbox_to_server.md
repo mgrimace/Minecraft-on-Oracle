@@ -6,6 +6,8 @@ Xbox usually only presents the featured servers, and no option to manually add y
 
 - Go to your network settings on the xbox, and advanced settings. Select DNS, and change from automatic to manual. 
 - Set the primary DNS as: `104.238.130.180`, and the secondary as: `1.1.1.1`.
+  - FYI this is the DNS redirection for [BedrockConnect](https://github.com/Pugmatt/BedrockConnect), it only redirects the featured servers.
+
 - Quit Minecraft if it was open, restart the console
 - Note: if you use Pi-Hole you may have to temporarily disable it
 
