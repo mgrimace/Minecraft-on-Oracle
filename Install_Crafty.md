@@ -30,8 +30,10 @@ sudo iptables -P INPUT ACCEPT
 sudo iptables -P OUTPUT ACCEPT
 sudo iptables -P FORWARD ACCEPT
 sudo iptables -F
-
+sudo netfilter-persistent save
 ```
+
+note the `sudo netfilter-persistent save` should save an empty ruleset to disk so it will be reloaded on reboot, otherwise you'd need to re-run the commands each time the server reboots.
 
 ## Forward ports in Oracle
 
