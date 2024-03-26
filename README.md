@@ -1,19 +1,23 @@
 # Create a Minecraft server on Oracle Free Tier
 
-These are instructions to create a free Minecraft server on an Oracle free tier on Ubuntu 22.04 with a 4 OCPU and 24 gb ram Ampere virtual machine.
+I created this guide as a father looking for a way for my son to play Minecraft with his friends. 
+
+These are instructions to create a free, always-on Minecraft server using Oracle's always-free tier. Using this guide we will create a Ubuntu 22.04 server with a 4 OCPU and 24 gb ram Ampere virtual machine, which is plenty to run multiple Minecraft servers.
 
 This guide assumes you have already created a free account in Oracle, and have the knowledge/ability to connect to a server via SSH.
 
-This guide also provides steps to connect an Xbox Series Console to the custom server. As well, I've added intructions to optionally install [Crafty](https://craftycontrol.com) a neat free server dashboard to make it easier to deploy and manage your Minecraft server(s). Recently, I added isntructions for hosting a cross-platform server via Crafty to enable players on both Java and Bedrock to play together
+This guide also provides steps to connect an Xbox Console to the custom server. As well, I've added intructions to  install [Crafty](https://craftycontrol.com) a neat free server dashboard to make it easier to deploy and manage your Minecraft server(s). Recently, I added isntructions for hosting a cross-platform server via Crafty to enable players on both Java and Bedrock players to play together.
+
+## Table of Contents
 
 1. [Create your Oracle server](#Getting_started)
 2. Install Minecraft on the server
    1. [Option 1](Install_Bedrock.md): install Minecraft Bedrock direclty on the server
    2. [Option 2](Install_Crafty.md): install Crafty, a GUI for deploying and managing multiple minecraft servers (my preferred option) 
-
 3. [Connect to the server on Xbox](Connect_Xbox_to_server.md)
-4. [Other Oracle settings: increase storage, reserve static IP, add cloudflare](Oracle_additional_settings.md)
-5. [Optional: create a server with crossplay enabled for java and bedrock](server_crossplay.md)
+4. [Other Oracle settings](Oracle_additional_settings.md): increase storage, reserve static IP, add cloudflare
+5. [Optional](server_crossplay.md): create a server with crossplay enabled for java and bedrock
+6. [Support this project](#Support_this_project)
 
 # Getting started
 
@@ -78,12 +82,14 @@ sudo ufw enable
 sudo ufw status
 ```
 
-## You have two options for installing Minecraft 
+## You now have two options for installing Minecraft 
 
 1. Install Minecraft Bedrock directly on the server to play on PC and Xbox, proceed [here](Install_Bedrock.md)
-2. Install Crafty, a server manager to manage and deploy different versions of minecraft, proceed [here](Install_Crafty.md)
+2. Install Crafty, my preferred option, to manage and deploy different versions of Minecraft. To do so proceed [here](Install_Crafty.md)
 
+## Support this project
 
+If you found this guide helpful, please consider buying me a coffee by clicking the link below. I'll do my best to keep this guide up to date and as user-friendly as possible. Thank you and take good care!
 
-
+[![Donate](https://camo.githubusercontent.com/0283ea90498d8ea623c07906a5e07e9e6c2a5eaa6911d52033687c60cfa8d22f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R4QX73RWYB3ZA)
 

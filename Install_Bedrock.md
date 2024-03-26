@@ -83,7 +83,19 @@ Again, all these xuid's can be found by attaching the server screen via `screen 
 
 Go to multiplayer, add server, and use the Ubuntu server's public IPv4 address. 
 
+# Next steps
+
+Return to the [main page](README.md)
+
 ### Connect from Xbox
 
-If you need to connect via console, there's some addtional instructions, go here [next](Connect_Xbox_to_server.md)
+- If you need to connect via console, there's some addtional instructions, go here [next](Connect_Xbox_to_server.md)
 
+### Setup Crafty
+
+- Ready to setup a webUI to deploy and manage multiple Minecraft servers? Go here [next](Install_Crafty.md)
+
+
+### Setup a Crossplay enabled server
+
+- As well, you can setup a cross-play compatible server, go here for [instructions](server_crossplay.md)

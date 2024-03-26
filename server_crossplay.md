@@ -45,3 +45,9 @@ This will prevent randoms and bots from joining your game
 ### Connect from Xbox
 
 If you need to connect via console, there's some addtional instructions, go here [next](Connect_Xbox_to_server.md)
+
+## Support this project
+
+If you found this guide helpful, please consider buying me a coffee by clicking the link below. I'll do my best to keep this guide up to date and as user-friendly as possible. Thank you and take good care!
+
+[![Donate](https://camo.githubusercontent.com/0283ea90498d8ea623c07906a5e07e9e6c2a5eaa6911d52033687c60cfa8d22f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f6e6174652d50617950616c2d677265656e2e737667)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R4QX73RWYB3ZA)

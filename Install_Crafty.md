@@ -55,9 +55,10 @@ note the `sudo netfilter-persistent save` should save an empty ruleset to disk s
 
 ## (Optional) Import your old Minecraft server
 
-If you had a previously created a Bedrock Minecraft, you can back it up and import it into crafy.
+1. If you had a previously created a Bedrock Minecraft, you can back it up and import it into crafy.
 
-We need to copy our old server to a new location so it can be imported
+2. We need to copy our old server to a new location so it can be imported
+
 
 ```bash
 cd /var/opt/minecraft/crafty
@@ -67,25 +68,29 @@ sudo chown -R crafty:crafty /var/opt/minecraft
 sudo chmod -R 2775 /var/opt/minecraft
 ```
 
-Connect to the webui by going to `https://IP:8443`,
-
- create new server, be sure to select the bedrock toggle, then select import from `/var/opt/minecraft/crafty/imports/[servername]` with executable `bedrock_server`
-
-To change properties, go to the server in the crafty webui and select files then change server.properties
+3. Connect to the webui by going to `https://IP:8443`,
+4. create new server, be sure to select the bedrock toggle, then select import from `/var/opt/minecraft/crafty/imports/[servername]` with executable `bedrock_server`
+5. To change properties, go to the server in the crafty webui and select files then change server.properties
 
 ## Create a server
 
-Use Crafty to create, deploy, and manage servers per their [documentation](https://docs.craftycontrol.com/pages/getting-started/access/)
+- Use Crafty to create, deploy, and manage servers per their [documentation](https://docs.craftycontrol.com/pages/getting-started/access/)
+
 
 ### Accessing the server (in the game)
 
-Go to multiplayer, add server, and use the Ubuntu server's public IPv4 address and port you assigned. 
+- Go to multiplayer, add server, and use the Ubuntu server's public IPv4 address and port you assigned. 
+
+
+# Next steps
+
+Return to the [main page](README.md)
 
 ### Connect from Xbox
 
-If you need to connect via console, there's some addtional instructions, go here [next](Connect_Xbox_to_server.md)
+- If you need to connect via console, there's some addtional instructions, go here [next](Connect_Xbox_to_server.md)
+
 
 ### Setup a Crossplay enabled server
 
-As well, you can setup a cross-play compatible server, go here for [instructions](server_crossplay.md)
-
+- As well, you can setup a cross-play compatible server, go here for [instructions](server_crossplay.md)

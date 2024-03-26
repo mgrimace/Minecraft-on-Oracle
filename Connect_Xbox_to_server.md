@@ -33,5 +33,16 @@ If you have a Pi-Hole, go to the admin console, Local DNS, and add the following
 - Make sure to toggle on the option to save this sever in your list, and give it a cool name.
 - Connect and enjoy!
 - To connect again later, once again select any featured server and hit play, now your server will show up in the new add/select server menu. 
-- Note: This menu appears to persist after re-enabling Pi-Hole; however, I've kept the manual DNS settings on the Xbox for now.
 
+# Next steps
+
+Return to the [main page](README.md)
+
+### Setup Crafty
+
+- Ready to setup a webUI to deploy and manage multiple Minecraft servers? Go here [next](Install_Crafty.md)
+
+
+### Setup a Crossplay enabled server
+
+- As well, you can setup a cross-play compatible server, go here for [instructions](server_crossplay.md)

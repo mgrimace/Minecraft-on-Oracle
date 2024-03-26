@@ -62,3 +62,20 @@ This assumes you already have a domain setup with Cloudflare using strict SSL (e
 - Scroll down to the end, and select SSL, +add, and choose Full as your encryption, save and enable.
 
 Visit Crafty at crafty.mydomain.com:8443 and access your minecraft server using minecraft.mydomain.com and its port (or minecraft1, mc1, etc.)
+
+# Next steps
+
+Return to the [main page](README.md)
+
+### Connect from Xbox
+
+- If you need to connect via console, there's some addtional instructions, go here [next](Connect_Xbox_to_server.md)
+
+### Setup Crafty
+
+- Ready to setup a webUI to deploy and manage multiple Minecraft servers? Go here [next](Install_Crafty.md)
+
+
+### Setup a Crossplay enabled server
+
+- As well, you can setup a cross-play compatible server, go here for [instructions](server_crossplay.md)
