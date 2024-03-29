@@ -6,7 +6,7 @@ These are instructions to create a free, always-on Minecraft server using Oracle
 
 This guide assumes you have already created a free account in Oracle, and have the knowledge/ability to connect to a server via SSH.
 
-This guide also provides steps to connect an Xbox Console to the custom server. As well, I've added intructions to  install [Crafty](https://craftycontrol.com) a neat free server dashboard to make it easier to deploy and manage your Minecraft server(s). Recently, I added isntructions for hosting a cross-platform server via Crafty to enable players on both Java and Bedrock players to play together.
+This guide also provides steps to connect an Xbox Console to the custom server. As well, I've added intructions to  install [Crafty](https://craftycontrol.com) a neat free server dashboard to make it easier to deploy and manage your Minecraft server(s). Recently, I added instructions for hosting a cross-platform server via Crafty to enable players on both Java and Bedrock players to play together.
 
 ## Table of Contents
 
