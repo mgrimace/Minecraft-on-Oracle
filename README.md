@@ -88,6 +88,7 @@ sudo ufw status
 - `netfilter-persistent` should save an empty ruleset to disk so it will be reloaded on reboot, otherwise you'd need to re-run the commands each time the server reboots.
 - For bedrock I'm opening ports 19132/upd and 19134/upd which will allow me to have two servers, you can open more as needed if you add additional servers
 - For Java I'm opening 25565
+- Port 8443 is what we'll use to access the Crafty webUI
 - I'm using `limit` on 22 to prevent brute force connections to SSH
 
 ## You now have two options for installing Minecraft 
