@@ -40,7 +40,7 @@ This guide also provides steps to connect an Xbox Console to the custom server. 
 
 2. Open Default Security List (or create a new one if one doesn’t exist yet)
 
-3. Add Ingress Rules to open UDP ports 19132 for Bedrock and both TCP and UDP ports 25565 for Java edition (or do them both while you're here). Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, 19132 for Destination port. 
+3. Add Ingress Rules to open UDP ports 19132 for Bedrock, both TCP and UDP ports 25565 for Java edition (or do them both while you're here), and TCP port 8443 for Crafty's webUI. Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, and the specific port noted for each for the Destination port. 
 
 
 ### Network security group ports
