@@ -23,18 +23,6 @@ sudo systemctl start crafty
 sudo systemctl enable crafty
 ```
 
-Disable IPTables (Oracle has it's own firewall)
-
-```bash
-sudo iptables -P INPUT ACCEPT
-sudo iptables -P OUTPUT ACCEPT
-sudo iptables -P FORWARD ACCEPT
-sudo iptables -F
-sudo netfilter-persistent save
-```
-
-note the `sudo netfilter-persistent save` should save an empty ruleset to disk so it will be reloaded on reboot, otherwise you'd need to re-run the commands each time the server reboots.
-
 ## Forward ports in Oracle
 
 ### Network list ports
@@ -43,7 +31,7 @@ note the `sudo netfilter-persistent save` should save an empty ruleset to disk s
 
 2. Open Default Security List (or create a new one if one doesn’t exist yet)
 
-3. Add Ingress Rules to open TCP ports 8443 for Crafty WebUI. Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, all for source, 19132 for Destination port. 
+3. Add Ingress Rules to open TCP ports 8443 for Crafty WebUI. Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, all for source, 8443 for Destination port. 
 
 
 ### Network security group ports

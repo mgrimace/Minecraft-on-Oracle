@@ -40,7 +40,7 @@ This guide also provides steps to connect an Xbox Console to the custom server. 
 
 2. Open Default Security List (or create a new one if one doesn’t exist yet)
 
-3. Add Ingress Rules to open TCP/UDP ports 19132 for Bedrock and 25565 for Java edition (or both). Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, 19132 for Destination port. Repeat for TCP. Repeat for 25565 if planning to use Java edition.
+3. Add Ingress Rules to open UDP ports 19132 for Bedrock and both TCP and UDP ports 25565 for Java edition (or do them both while you're here). Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, 19132 for Destination port. 
 
 
 ### Network security group ports
@@ -71,16 +71,24 @@ sudo iptables -P FORWARD ACCEPT
 sudo iptables -P OUTPUT ACCEPT
 sudo iptables -F
 sudo iptables-save
+sudo netfilter-persistent save
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow 22/tcp
+sudo ufw limit 22/tcp
 sudo ufw allow 19132/udp
-sudo ufw allow 19132/tcp
-sudo ufw allow 25565/udp
-sudo ufw allow 25565/tcp
+sudo ufw allow 19134/udp
+sudo ufw allow 25565
+sudo ufw allow 8443/tcp
 sudo ufw enable
 sudo ufw status
 ```
+
+**Notes:** 
+
+- `netfilter-persistent` should save an empty ruleset to disk so it will be reloaded on reboot, otherwise you'd need to re-run the commands each time the server reboots.
+- For bedrock I'm opening ports 19132/upd and 19134/upd which will allow me to have two servers, you can open more as needed if you add additional servers
+- For Java I'm opening 25565
+- I'm using `limit` on 22 to prevent brute force connections to SSH
 
 ## You now have two options for installing Minecraft 
 
