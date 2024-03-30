@@ -15,7 +15,7 @@ This guide also provides steps to connect an Xbox Console to the custom server. 
    1. [Option 1](Install_Bedrock.md): install Minecraft Bedrock direclty on the server
    2. [Option 2](Install_Crafty.md): install Crafty, a GUI for deploying and managing multiple minecraft servers (my preferred option) 
 3. [Connect to the server on Xbox](Connect_Xbox_to_server.md)
-4. [Other Oracle settings](Oracle_additional_settings.md): increase storage, reserve static IP, add cloudflare
+4. [Other Oracle settings](Oracle_additional_settings.md): harden your SSH connection, increase storage, reserve static IP, add cloudflare
 5. [Optional](server_crossplay.md): create a server with crossplay enabled for java and bedrock
 6. [Support this project](#Support_this_project)
 
