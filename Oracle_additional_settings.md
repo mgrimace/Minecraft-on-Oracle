@@ -1,5 +1,26 @@
 # Other Oracle options
 
+## Install Fail2Ban to harden your SSH connection
+- First you'll want to ensure that you're login in to your Oracle server via key and not password. This should be the case as you created your key-pair when creating the server; however, if not, follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
+- Next, you can install Fail2Ban to block brute-force attempts to connect via SSH to your server. You can follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-20-04) or the following steps:
+```bash
+sudo apt update
+sudo apt install fail2ban
+```
+To install, (note: fail2ban is disabled by default). Then, 
+```bash
+cd /etc/fail2ban
+sudo cp jail.conf jail.local
+sudo nano jail.local
+```
+Next, we'll enable SSH protection, scroll to `[SSHD]` and add the line `enabled = true`. Save and quit
+Next, we'll start the service
+```bash
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+```
+Congrats, your Oracle server should be better protected
+
 ## Create an elastic (static) IP
 
 - Go to oracle, networking, IP management, Reserve public IP
