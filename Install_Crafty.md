@@ -1,7 +1,7 @@
 # Installing Crafty
 
 ## Oracle setup
-If you haven't already done so, make sure you have forwarded ports in both the OCI interface, and on your Ubuntu server. Instructions to do so are found on [main page](https://github.com/mgrimace/Minecraft-on-Oracle/blob/main/README.md#forward-ports). After ensuring all the appropriate ports are opened (e.g., specifically, 8443 for the Crafty webUI), proceed with the installation of Crafty.
+If you haven't already done so, make sure you have forwarded ports in both the OCI interface, and on your Ubuntu server. Instructions to do so are found on [main page](README.md#forward-ports). After ensuring all the appropriate ports are opened (e.g., specifically, 8443 for the Crafty webUI), proceed with the installation of Crafty.
 
 ## Previous Minecraft Install?
 If you previously set up a bedrock server, you'll need to stop it first 
