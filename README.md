@@ -37,7 +37,7 @@ This guide also provides steps to connect an Xbox Console to the custom server. 
 
 ### Network list ports
 
-1. After it’s created, go to the instance details, find “Primary VNIC” section, and open the subnet link (or create a new one).
+1. After your Ubuntu server is created, go to the instance details, find “Primary VNIC” section, and open the subnet link (or create a new one).
 
 2. Open Default Security List (or create a new one if one doesn’t exist yet)
 
@@ -46,7 +46,7 @@ This guide also provides steps to connect an Xbox Console to the custom server. 
 
 ### Network security group ports
 
-1. Then, go to networking, virtual cloud networks. Select your compartmen on the sidebar, then select your vcn from the list.
+1. Then, go to networking, virtual cloud networks. Select your compartment on the sidebar, then select your VCN from the list.
 
 2. In the VCN settings, on the resources sidebar, select Network Security Groups, create new, and add the same rules exactly as above.
 
