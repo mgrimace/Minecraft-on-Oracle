@@ -10,8 +10,8 @@ This guide also provides steps to connect an Xbox Console to the custom server. 
 
 ## Table of Contents
 
-1. [Create your Oracle server](#Getting_started)
-2. [Forward ports and create firewall entries](#Forward_ports)
+1. [Create your Oracle server](#Getting-started)
+2. [Forward ports and create firewall entries](#Forward-ports)
 3. Install Minecraft on the server
    1. [Option 1](Install_Bedrock.md): install Minecraft Bedrock direclty on the server
    2. [Option 2](Install_Crafty.md): install Crafty, a GUI for deploying and managing multiple minecraft servers (my preferred option) 
