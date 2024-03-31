@@ -1,5 +1,48 @@
 # Installing Crafty
 
+## Oracle setup
+If you haven't already done so, make sure you have forwarded ports in both the OCI interface, and on your ubuntu server found on [main page](README.md#forward-ports). Specifically, you'll need to open port 8443 for the Crafty WebUI. To recap:
+
+### Network list ports
+
+1. Go to the instance details, find “Primary VNIC” section, and open the subnet link (or create a new one).
+
+2. Open Default Security List (or create a new one if one doesn’t exist yet)
+
+3. Add Ingress Rules to open TCP ports 8443 for Crafty WebUI. Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, all for source, 8443 for Destination port. 
+
+### Network security group ports
+
+1. Then, go to networking, virtual cloud networks. Select your compartmen on the sidebar, then select your vcn from the list.
+
+2. In the VCN settings, on the resources sidebar, select Network Security Groups, select the one we created earlier (or create a new one), and add the same rules exactly as above.
+
+SSH back into your server after making sure the ports are properly forwarded in Oracle
+
+### Open ports on the server 
+
+If you haven't already done so, make sure the following ports and firewall entries are enabled on your Ubuntu server
+
+```bash
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -F
+sudo iptables-save
+sudo netfilter-persistent save
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw limit 22/tcp
+sudo ufw allow 19132/udp
+sudo ufw allow 19134/udp
+sudo ufw allow 25565
+sudo ufw allow 8443/tcp
+sudo ufw enable
+sudo ufw status
+```
+Proceed with the installation of Crafy
+
+## Previous Minecraft Install?
 If you previously set up a bedrock server, you'll need to stop it first 
 
 ```bash
@@ -22,22 +65,6 @@ Agree to creating a servce during the install
 sudo systemctl start crafty
 sudo systemctl enable crafty
 ```
-
-### Network list ports
-
-1. After it’s created, go to the instance details, find “Primary VNIC” section, and open the subnet link (or create a new one).
-
-2. Open Default Security List (or create a new one if one doesn’t exist yet)
-
-3. Add Ingress Rules to open TCP ports 8443 for Crafty WebUI if you didn't already do this during the [initial setup](README.md). Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, all for source, 8443 for Destination port. 
-
-
-### Network security group ports
-
-1. Then, go to networking, virtual cloud networks. Select your compartmen on the sidebar, then select your vcn from the list.
-
-2. In the VCN settings, on the resources sidebar, select Network Security Groups, select the one we created earlier (or create a new one), and add the same rules exactly as above.
-
 
 ## (Optional) Import your old Minecraft server
 
