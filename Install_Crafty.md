@@ -23,15 +23,13 @@ sudo systemctl start crafty
 sudo systemctl enable crafty
 ```
 
-## Forward ports in Oracle
-
 ### Network list ports
 
 1. After it’s created, go to the instance details, find “Primary VNIC” section, and open the subnet link (or create a new one).
 
 2. Open Default Security List (or create a new one if one doesn’t exist yet)
 
-3. Add Ingress Rules to open TCP ports 8443 for Crafty WebUI. Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, all for source, 8443 for Destination port. 
+3. Add Ingress Rules to open TCP ports 8443 for Crafty WebUI if you didn't already do this during the [initial setup](README.md). Use CIDR for Source Type, 0.0.0.0/0 for Source CIDR, all for source, 8443 for Destination port. 
 
 
 ### Network security group ports
